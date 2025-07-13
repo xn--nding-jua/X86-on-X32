@@ -3,6 +3,7 @@ echo "Preparing checkout of DirectFB v1.7.7..."
 cd flux
 git init
 git remote add origin https://github.com/deniskropp/flux.git
+git fetch --depth 1 origin master
 git checkout master
 cd ..
 
@@ -25,6 +26,7 @@ echo "Preparing checkout of FBVNC..."
 cd fbvnc
 git init
 git remote add origin https://github.com/aligrudi/fbvnc.git
+git fetch --depth 1 origin master
 git checkout master
 cd ..
 
