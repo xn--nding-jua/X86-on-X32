@@ -1,0 +1,12 @@
+[submodule "flux"]
+	path = flux
+	url = https://github.com/deniskropp/flux.git
+[submodule "DirectFB"]
+	path = DirectFB
+	url = https://github.com/deniskropp/DirectFB.git
+[submodule "SDL"]
+	path = SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "fbvnc"]
+	path = fbvnc
+	url = https://github.com/aligrudi/fbvnc.git
