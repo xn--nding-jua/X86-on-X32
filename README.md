@@ -1,12 +1,21 @@
 # X86-on-X32 - Running DOS and Windows on the Behringer X32
 This repository collects some open-source-software to run an emulated x86-Computer on the Behringer X32. Why? Just for fun.
 
+![alt_text](Documentation/win311.jpg)
+
 ## General idea
 The on-board i.MX25 has 400MHz and is an ARMv5-processor with 64 MB of LPDDR-RAM. It has enough power to drive QEMU and with the help of a swap-file on an USB-thumbdrive, the memory is enough to drive an emulated x88-computer.
 
 I'm using QEMU in version 6.2.0 as this is the last version supporting the ARMv5 as a Host-system. SDL2 drives the graphic-system redirecting the graphics to DirectFB, which outputs to the Linux-Framebuffer /dev/fb0.
 
 During the development I faced some problems using SDL2 and DirectFB and I decided to use a second path to output the graphics. So I used a VNC-backend in QEMU to output the graphics to a VNC-server and connect a local VNC-viewer drawing to the framebuffer to output the graphics as well. You may decide which version is working for you.
+
+## Pictures
+Windows 3.11 is booting up even in the enhanced mode, but the system is pretty slow. The program manager and all tools are there, but don't expect a good UX as the RAM is swapped to the USB-thumbdrive:
+![alt_text](Documentation/progman.jpg)
+
+DOS programs on the other hand are running pretty well and are usable:
+![alt_text](Documentation/dos.jpg)
 
 ## Steps to compile and load the emulator
 
