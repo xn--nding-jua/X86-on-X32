@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Installing dependencies via apt..."
-sudo apt install libdirectfb-dev
+sudo apt install ninja-build libdirectfb-dev libglib2.0-dev libsdl2-dev:armel
 
 echo "Preparing checkout of DirectFB v1.7.7..."
 cd flux
