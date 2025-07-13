@@ -1,9 +1,16 @@
 #!/bin/bash
 echo "Preparing checkout of DirectFB v1.7.7..."
+cd flux
+git init
+git remote add origin https://github.com/deniskropp/flux.git
+git fetch --depth 1
+git checkout
+cd ..
+
 cd DirectFB
 git init
 git remote add origin https://github.com/deniskropp/DirectFB.git
-git fetch --depth 1 origin tag directfb-1.7
+git fetch --depth 1 origin directfb-1.7
 git checkout directfb-1.7
 cd ..
 
@@ -15,8 +22,13 @@ git fetch --depth 1 origin tag release-2.0.5
 git checkout release-2.0.5
 cd ..
 
-echo "Checking out all remaining submodules..."
-git submodule update --init --recursive
+echo "Preparing checkout of FBVNC..."
+cd fbvnc
+git init
+git remote add origin https://github.com/aligrudi/fbvnc.git
+git fetch --depth 1
+git checkout
+cd ..
 
 echo "Downloading QEMU v6.2.0..."
 wget https://download.qemu.org/qemu-6.2.0.tar.bz2

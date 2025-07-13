@@ -25,3 +25,5 @@ cp freedos/freedos.boot.disk.1.4MB.img usb/qemu/freedos.img
 
 echo "Copying scripts..."
 cp files/*.sh usb/qemu/
+
+echo "Done. Caution: You have to take care, that other used libraries are copied from /usr/lib/arm-linux-gnueabi/. If you are unsure, you may copy the whole folder to the thumbdrive..."

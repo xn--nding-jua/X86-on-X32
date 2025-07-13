@@ -17,7 +17,7 @@ You can find all necessary steps here: [OpenX32](https://github.com/xn--nding-ju
 I'm using different open-source-tools to get this system up and running: DirectFB 1.7.7, SDL2 2.0.5 and QEMU 6.2.0. So the repository uses other GitHub-repositories as submodules. Please use the following command to checkout the main-repo together with submodules. To minimze the download-size and -time, we will clone the submodules separately:
 ```
 git clone --depth 1 https://github.com/xn--nding-jua/X86-on-X32.git
-cd x86-on-x32
+cd X86-on-X32
 ./setup.sh
 ```
 
@@ -39,7 +39,9 @@ apt install libXXX-dev:armel
 This will install the libraries for the cross-compiler under Debian.
 
 ### Step 4: Copy and prepare a USB-thumbdrive
-When all parts are compiled successfully, you can call the script "copy.sh" to collect all files into the subfolder "usb". This folder can be copied to an USB-thumbdrive and loaded via the top USB-port on the Behringer X32. Here is an example to mount the drive and call QEMU:
+When all parts are compiled successfully, you can call the script "copyfiles.sh" to collect all compiled files into the subfolder "usb". This folder can be copied to an USB-thumbdrive and loaded via the top USB-port on the Behringer X32. Its up to you, that you copy other library-files from /usr/lib/arm-linux-gnueabi/ to the subfolder "qemu/lib" on your thumbdrive.
+
+Here is an example to mount the drive and call QEMU:
 ```
 # mount the drive
 mkdir /mnt/usb
