@@ -1,12 +1,16 @@
 [submodule "flux"]
 	path = flux
 	url = https://github.com/deniskropp/flux.git
+	ignore = dirty
 [submodule "DirectFB"]
 	path = DirectFB
 	url = https://github.com/deniskropp/DirectFB.git
+	ignore = dirty
 [submodule "SDL"]
 	path = SDL
 	url = https://github.com/libsdl-org/SDL.git
+	ignore = dirty
 [submodule "fbvnc"]
 	path = fbvnc
 	url = https://github.com/aligrudi/fbvnc.git
+	ignore = dirty

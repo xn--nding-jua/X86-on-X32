@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "Installing dependencies via apt..."
+sudo apt install libdirectfb-dev
+
 echo "Preparing checkout of DirectFB v1.7.7..."
 cd flux
 git init

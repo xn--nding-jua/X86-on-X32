@@ -6,8 +6,8 @@ OBJS = fbvnc.o draw.o
 
 all: fbvnc
 .c.o:
-        $(CC) -c $(CFLAGS) $<
+	$(CC) -c $(CFLAGS) $<
 fbvnc: $(OBJS)
-        $(CC) -o $@ $(OBJS) $(LDFLAGS)
+	$(CC) -o $@ $(OBJS) $(LDFLAGS)
 clean:
-        rm -f *.o fbvnc
+	rm -f *.o fbvnc

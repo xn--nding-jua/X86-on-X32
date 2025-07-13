@@ -75,6 +75,17 @@ umount /mnt/usb
 
 Take care, that you place the necessary libraries to the folder "qemu/lib" on the thumbdrive. As the system only has 64MB of RAM, I decided to put all libs on the thumbdrive instead of the initramfs.
 
+When you called "copyfiles.sh" there will be some helpful scripts that can be called from the Linux on the X32:
+* prepare.sh -> creates the library-symlink and mounts the swap-file
+* startqemu.sh -> starts QEMU using SDL2 and DirectFB
+* startqemuvnc.sh -> starts QEMU using VNC-backend
+* startvnc.sh -> starts VNC-Viewer on local-address
+* stop.sh -> unlinks the library-symlink and disables the swapdrive
+
+## Some pitfalls
+* SDL is working only for versions 2.0.1 up to 2.0.5. Version 2.0.5 is not compiling under modern systems. You have to edit the Makefile after the compilation has begun. Remove the option "-Werrordeclaration-after-statement" from the EXTRA_CFLAGS and restart the make-process. Then SDL will compile without errors
+
+
 ## Used third-party software
 * DirectFB in Version 1.7.7 (https://github.com/deniskropp/DirectFB/tree/directfb-1.7)
 * SDL2 in Version 2.0.5 (https://github.com/libsdl-org/SDL/tree/release-2.0.5)
