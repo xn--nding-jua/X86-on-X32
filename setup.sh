@@ -21,6 +21,13 @@ git submodule update --init --recursive
 echo "Downloading QEMU v6.2.0..."
 wget https://download.qemu.org/qemu-6.2.0.tar.bz2
 tar -xjvf qemu-6.2.0.tar.bz2
+rm qemu-6.2.0.tar.bz2
+
+echo "Downloading FreeDOS..."
+mkdir freedos
+cd freedos
+wget https://github.com/codercowboy/freedosbootdisks/raw/refs/heads/master/bootdisks/freedos.boot.disk.1.4MB.img
+cd ..
 
 echo "Copying modified files..."
 rm fbvnc/Makefile
